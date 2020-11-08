@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ranking
+{% endblock %}
+
+{% block main %}
+    <p>In this section you are ranked among your friends.</p>
+    <hr>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>username</th>
+                <th>Total</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for key, value in endrank.items() %}
+
+                <tr>
+                    {% if key == name %}
+                        <th class="increment">.</th>
+                        <th>{{key}}</th>
+                        <th>{{value | usd }}</th>
+                    {% else %}
+                        <td class="increment">.</td>
+                        <td>{{key}}</td>
+                        <td>{{value | usd }}</td>
+                    {% endif %}
+
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Query for quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="symbol" placeholder="Symbol" type="text" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+    <hr>
+    <p>We recommend you to look for company you want to quote in "Company List" section.</p>
+{% endblock %}

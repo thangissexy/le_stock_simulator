@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Company List
+{% endblock %}
+
+{% block main %}
+    <p>We recommend you to use Ctrl + F to get exactly the company you are looking for.</p>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for com in thelist %}
+                <tr>
+                    <td>{{ com["Symbol"] }}</td>
+                    <td>{{ com["Company Name"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+

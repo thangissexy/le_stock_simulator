@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy it
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="symbol" placeholder="Symbol" type="text" required>
+            <input class="form-control" name="shares" placeholder="Number" type="number" min="1" required>
+        </div>
+        <button class="btn btn-primary" type="submit">     Buy     </button>
+    </form>
+    <hr>
+    <p>We recommend you to look for company from which you want to buy stocks in "Company List" section.</p>
+
+
+
+{% endblock %}
